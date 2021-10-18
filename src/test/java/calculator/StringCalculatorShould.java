@@ -21,6 +21,14 @@ class StringCalculatorShould {
     	assertEquals(3, StringCalculator.add("1,2"));
     }
     
+    @Test
+    public void accept_newLineAs_Valid_delimiter() {
+    	assertEquals(6, StringCalculator.add("1,2\n3"));
+    }
     
+    @Test
+    public void accept_customdelimiter_syntax() {
+    	assertEquals(3, StringCalculator.add("//:\n1:2"));
+    }
     
 }
